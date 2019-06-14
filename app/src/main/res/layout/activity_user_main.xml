@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kimsh.skok.angel_in_us.UserMain">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:id="@+id/select_buttons"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:columnCount="2"
+            android:rowCount="2"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:text="facebook"/>
+            <ToggleButton
+                android:id="@+id/coffeeBt"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="coffee"
+                android:textOff="coffee"/>
+            <ToggleButton
+                android:id="@+id/nonCoffeeBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="Non-coffee"
+                android:textOff="Non-coffee"/>
+
+        </GridLayout>
+        <GridLayout
+            android:id="@+id/menu_coffee"
+            android:layout_below="@+id/select_buttons"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="5"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coffee Menu "
+                android:textStyle="bold"
+                android:layout_columnSpan="2"/>
+            <Button
+                android:id="@+id/americano_h_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아메리카노" />
+            <Button
+                android:id="@+id/americano_c_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                android:text="아메리카노(cold)"/>
+            <Button
+                android:id="@+id/coldblew_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="콜드브루"/>
+            <Button
+                android:id="@+id/caramelMoka_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카라멜 카페모카"/>
+            <Button
+                android:id="@+id/heigle_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                android:text="헤이즐넛 카페라떼"/>
+            <Button
+                android:id="@+id/caramelmaki_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                android:text="카라멜 마키아또"/>
+
+        </GridLayout>
+        <GridLayout
+            android:id="@+id/menu_noncoffee"
+            android:layout_below="@+id/select_buttons"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="5"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentLeft="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Non-coffee Menu "
+                android:textStyle="bold"
+                android:layout_columnSpan="2"/>
+            <Button
+                android:id="@+id/greenMilk_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="그린밀크티"/>
+            <Button
+                android:id="@+id/lemonade_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="레모네이드"/>
+            <Button
+                android:id="@+id/strawberry_snow_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                android:text="딸기 스노우 (Ice)"/>
+            <Button
+                android:id="@+id/luibos_tea_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                android:text="루이보스티 (Hot)"/>
+
+        </GridLayout>
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/itemIm"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/enjel"/>
+            <TextView
+                android:id="@+id/itemName"
+                android:layout_toRightOf="@+id/itemIm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="15dp"
+
+                />
+            <RadioGroup
+                android:id="@+id/radioSize"
+                android:layout_toRightOf="@+id/itemIm"
+                android:layout_below="@+id/itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/check_small"
+                    android:layout_toRightOf="@+id/itemIm"
+                    android:layout_below="@+id/itemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="small"/>
+                <RadioButton
+                    android:id="@+id/check_regular"
+                    android:layout_toRightOf="@+id/check_small"
+                    android:layout_below="@+id/itemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="regular"/>
+                <RadioButton
+                    android:id="@+id/check_large"
+                    android:layout_toRightOf="@+id/check_regular"
+                    android:layout_below="@+id/itemName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="large"/>
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/check_milk"
+                android:layout_toRightOf="@+id/itemIm"
+                android:layout_below="@+id/radioSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="milk"/>
+            <CheckBox
+                android:id="@+id/check_whip"
+                android:layout_toRightOf="@+id/check_milk"
+                android:layout_below="@+id/radioSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="whip"/>
+            <CheckBox
+                android:id="@+id/check_shot"
+                android:layout_toRightOf="@+id/check_whip"
+                android:layout_below="@+id/radioSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shot"/>
+            <Button
+                android:id="@+id/select_complete_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/gae"
+                android:layout_below="@+id/check_shot"
+                android:text="선택완료"
+                />
+            <EditText
+                android:id="@+id/NumEdit"
+                android:layout_toRightOf="@+id/itemIm"
+                android:layout_below="@+id/check_shot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="수량"
+                android:inputType="number"
+                android:text="1"/>
+            <TextView
+                android:id="@+id/gae"
+                android:layout_toRightOf="@+id/NumEdit"
+                android:layout_below="@+id/check_shot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="개"
+                />
+            <TextView
+            android:id="@+id/itemSelectedText"
+            android:layout_toRightOf="@+id/itemIm"
+            android:layout_below="@+id/select_complete_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13dp"
+
+            />
+
+            <Button
+                android:id="@+id/addB"
+                android:layout_toRightOf="@+id/itemIm"
+                android:layout_below="@+id/itemSelectedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추가"/>
+
+            <Button
+                android:id="@+id/calcB"
+                android:layout_toRightOf="@+id/addB"
+                android:layout_below="@+id/itemSelectedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="결제"/>
+
+
+
+
+            <ScrollView
+
+                android:id="@+id/ScView"
+                android:layout_below="@+id/itemIm"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/Jumun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:text="주문 내역"/>
+                    <TextView
+                        android:id="@+id/JunumList"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
